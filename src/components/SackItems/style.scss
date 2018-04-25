@@ -1,0 +1,43 @@
+.sack {
+	&.scrollarea {
+		position: absolute;
+    	top: 0;
+		right: 15px;
+		bottom: 40px;
+		left: 670px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #000;
+		opacity: 0.6;
+		border: 1px solid #888;
+	}
+
+	.inner {
+		&.scrollarea-content {
+			position: relative;
+			z-index: 2;
+		}
+	}
+	.item {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 10px;
+		border: 1px solid transparent;
+		border-radius: 5px;
+
+		&:hover {
+			border-color: #777;
+		}
+		&.selected {
+			border-color: #2fc700;
+		}
+	}
+}

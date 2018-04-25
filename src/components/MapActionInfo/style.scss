@@ -1,0 +1,26 @@
+.dialog.map-action-info {
+	.dialog-container {
+		padding: 20px 50px;
+		text-align: center;
+		min-width: 400px;
+		min-height: 150px;
+	}
+	.name {
+		margin-bottom: 10px;
+		font-size: 24px;
+	}
+	.time {
+		color: #a1a1a1;
+	}
+	.lines {
+		color: #888;
+		padding: 6px 0;
+		font-size: 18px;
+	}
+	.button {
+		width: auto;
+		padding: 0 10px;
+		margin-top: 20px;
+		min-width: 80px;
+	}
+}

@@ -1,0 +1,57 @@
+.table-container {
+	table {
+		width: 100%;
+	}
+	thead {
+		background-color: #eceeef;
+	}
+	th {
+		position: relative;
+		padding: 12px 10px;
+		font-weight: normal;
+		text-align: left;
+		background-color: #eceeef;
+		border-bottom: 2px solid #464c5f;
+	}
+	th:before {
+		content: '';
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 8px;
+		bottom: 8px;
+		width: 1px;
+		background-color: #637c99;
+	}
+	th:first-child:before {
+		display: none;
+	}
+	td {
+		position: relative;
+		padding: 12px 10px;
+	}
+	td.checkbox-cell {
+		width: 42px;
+		text-align: center;
+	}
+	&.selectable {
+		tr {
+			cursor: pointer;
+			&.selected {
+				background-color: #e6f0fd;
+				td:first-child {
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						left: -5px;
+						width: 5px;
+						top: 0;
+						bottom: 0;
+						background-color: #293f4f;
+					}
+				}
+			}
+		}
+	}
+}

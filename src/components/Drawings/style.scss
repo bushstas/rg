@@ -1,0 +1,22 @@
+.dialog.drawings {
+	.dialog-container {
+		width: 80%;
+		height: 80%;
+	}
+	.inner {
+		&:after {
+			content: '';
+			display: block;
+			clear: left;
+		}
+	}
+	.item-container {
+		width: 180px;
+    	float: left;
+	}
+	.item-name {
+		text-align: center;
+		color: #f1f1f1;
+		font-size: 19px;
+	}
+}

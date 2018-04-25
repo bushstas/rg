@@ -1,0 +1,42 @@
+.door {
+	position: absolute;
+	z-index: 12;
+	background-color: #fff;
+	
+	
+	&:after {
+	//	content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 10px;
+		background-color: #000;
+	    opacity: 0.6;
+	}
+
+	&.t {
+		width: 25px;
+		height: 10px;
+		margin-top: -5px;
+		margin-left: 50px;
+	}
+	&.b {
+		width: 25px;
+		height: 10px;
+		margin-top: 125px;
+		margin-left: 50px;
+	}
+	&.l {
+		width: 10px;
+		height: 25px;
+		margin-top: 50px;
+		margin-left: -5px;
+	}
+	&.r {
+		width: 10px;
+		height: 25px;
+		margin-top: 50px;
+		margin-left: 125px;
+	}
+}

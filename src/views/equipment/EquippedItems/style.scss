@@ -1,0 +1,166 @@
+.equipment-area {
+	position: relative;
+	width: 600px;
+	height: 600px;
+	background-image: url(/assets/images/inv.jpg);
+	margin-top: 20px;
+
+	.weapon-set-buttons {
+		position: absolute;
+		left: 10px;
+		top: 215px;
+		width: 30px;
+
+		div {
+			color: #382007;
+			cursor: pointer;
+		    width: 30px;
+		    line-height: 40px;
+		    text-align: center;
+		    font-size: 28px;
+
+		    &.active {
+		    	color: #fff3c7;
+		    	cursor: default;
+		    }
+		}
+	}
+	
+	.item-slot {
+		position: absolute;
+		width: 150px;
+		height: 200px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		.item {
+			position: absolute;
+			top: 0;				
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&.busy {
+			background-image: none !important;
+		}
+
+		&.dragged {
+			z-index: 10;
+		}
+
+		&.rhand {
+			left: 50px;
+			top: 150px;
+		}
+		&.lhand {
+			right: 50px;
+			top: 150px;
+		}
+		&.torso {
+			left: 50%;
+			top: 150px;
+			margin-left: -75px;
+		}
+		&.head {
+			height: 110px;
+			left: 50%;
+			top: 30px;
+			margin-left: -75px;
+		}
+		&.neck {
+			height: 110px;
+			right: 50px;
+			top: 30px;
+		}
+		&.arms {
+			height: 110px;
+			left: 50px;
+			top: 30px;
+		}
+		&.feet {
+			height: 110px;
+			left: 50%;
+			top: 360px;
+			margin-left:-75px;
+		}
+		&.belt {
+			height: 110px;
+			left: 50px;
+			top: 360px;
+		}
+		&.ring {
+			width: 70px;
+			height: 70px;
+			&.first {
+				right: 130px;
+				top: 370px;
+			}
+			&.second {
+				right: 50px;
+				top: 370px;
+			}
+			&.third {
+				right: 130px;
+				top: 450px;
+			}
+			&.fourth {
+				right: 50px;
+				top: 450px;
+			}
+		}
+		&.talisman {
+			width: 80px;
+			height: 80px;
+			&.first {
+				left: 40px;
+				top: 500px;
+			}
+			&.second {
+				left: 125px;
+				top: 500px;
+			}
+			&.third {
+				left: 210px;
+				top: 500px;
+			}
+			&.fourth {
+				left: 295px;
+				top: 500px;
+			}
+		}
+	}
+
+	&.warrior {
+		.rhand {
+			background-image: url(/assets/images/inventory/warrior/rhand.png);
+		}
+		.lhand {
+			background-image: url(/assets/images/inventory/warrior/lhand.png);	
+		}
+		.torso {
+			background-image: url(/assets/images/inventory/warrior/torso.png);
+		}
+		.head {
+			background-image: url(/assets/images/inventory/warrior/head.png);
+		}
+		.neck {
+			background-image: url(/assets/images/inventory/warrior/neck.png);
+		}
+		.arms {
+			background-image: url(/assets/images/inventory/warrior/arms.png);
+		}
+		.feet {
+			background-image: url(/assets/images/inventory/warrior/feet.png);
+		}
+		.belt {
+			background-image: url(/assets/images/inventory/warrior/belt.png);
+		}
+		.ring {
+			background-image: url(/assets/images/inventory/warrior/ring.png);
+		}
+		.talisman {
+			background-image: url(/assets/images/inventory/warrior/talisman.png);
+		}
+	}
+}

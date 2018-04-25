@@ -1,0 +1,19 @@
+.dialog-area.confirm {
+	.dialog {
+		width: 400px;
+	}
+	.dialog-content {
+		padding: 25px 20px;
+		font-size: 14px;
+	}
+	.button {
+		width: 80px;
+
+		&.no {
+			background-color: #d12626;
+			&:hover {
+				background-color: #e02f2f;
+			}
+		}
+	}
+}

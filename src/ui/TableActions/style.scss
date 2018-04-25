@@ -1,0 +1,38 @@
+.table-actions {
+	padding: 10px 24px 0 24px;
+
+	span {
+		display: inline-block;
+		margin-right: 24px;
+		color: #293f4f;
+		cursor: pointer;
+		padding-left: 26px;
+		line-height: 22px;
+		background-position: 0 50%;
+		background-repeat: no-repeat;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.setup {
+			background-image: url('/assets/images/icon-check.png')
+		}
+		&.download {
+			background-image: url('/assets/images/icon-download.png')
+		}
+		&.print {
+			background-image: url('/assets/images/icon-print.png')
+		}
+		&.refresh {
+			background-image: url('/assets/images/icon-refresh.png')
+		}
+		&.suspend {
+			background-image: url('/assets/images/icon-pause.png')
+		}
+		&.prolong {
+			background-image: url('/assets/images/icon-points.png')
+		}
+	}
+
+}

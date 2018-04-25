@@ -1,0 +1,32 @@
+.dialog {
+    position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	align-items: center;
+    justify-content: center;
+    display: flex;
+
+    .dialog-mask {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #000;
+		opacity: 0.5;
+	}
+	.dialog-container {
+		position: relative;
+		z-index: 2;
+		background-color: #000;
+		border-radius: 2px;
+		box-shadow: 0 0 6px #000;
+		border: 1px solid #888;
+		color: #c1c1c1;
+	}
+}

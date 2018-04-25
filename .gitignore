@@ -1,0 +1,5 @@
+public
+node_modules
+local_config.js
+.idea
+/npm-debug.log

@@ -1,0 +1,75 @@
+.collapse {
+    &.red {
+        .collapse-button {
+            color: #F44336;
+            &:hover {
+                color: #dc3327;
+            }
+        }
+    }
+    .collapse-button {
+        color: #437edd;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding-left: 18px;
+        line-height: 20px;
+        transition: margin-bottom 0.3s;
+        
+        &.expanded {
+            margin-bottom: 5px;
+        }
+
+        &:hover {
+            color: #528fe8;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 12px;
+            height: 8px;
+            background-image: url('/assets/images/select-arrow.png');
+            transition: transform 0.2s;
+        }
+        &.expanded:before {
+            transform: rotate(180deg);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 18px;
+            right: 0;
+            background-image: url('/assets/images/blue-dash.png');
+            height: 1px;
+            bottom: 0;
+        }
+    }
+
+    &.multiline {
+        .collapse-button:after {
+            display: none;
+        }
+    }
+
+    .collapse-button-before {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    &.arrow-right {
+        .collapse-button {
+            padding-left: 0;
+            padding-right: 18px;
+            &:before {
+                left: auto;  
+                right: 0;
+            }
+            &:after {
+                left: 0;
+                right: 18px;
+            }
+        }
+    }
+}

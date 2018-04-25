@@ -1,0 +1,34 @@
+// .gamemap.innermap {
+// 	.cell {
+// 		margin: 0;
+// 	}
+// 	.wall {
+// 		position: absolute;
+// 		background-image: url(/assets/images/wall.png);
+// 		&.right,
+// 		&.left {
+// 			width: 10px;
+// 			top: -5px;
+// 			bottom: -5px;
+// 		}
+// 		&.left {
+// 			left: -5px;
+// 		}
+// 		&.right {
+// 			right: -5px;
+// 		}
+// 		&.top,
+// 		&.bottom {
+// 			height: 10px;
+// 			left: -5px;
+// 			right: -5px;
+// 		}
+// 		&.top {
+// 			top: -5px;
+// 		}
+// 		&.bottom {
+// 			bottom: -5px;
+// 		}
+		
+// 	}
+// }

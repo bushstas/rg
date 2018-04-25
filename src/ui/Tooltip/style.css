@@ -1,0 +1,147 @@
+.tooltip-sign {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #6d88aa;
+	color: #fff;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+	font-size: 14px;
+	white-space: normal;
+
+	&:hover {
+		background-color: #333;
+
+		.tooltip-popup {
+			display: block;
+		}
+	}
+
+	&.small {
+		.tooltip-popup {
+			width: 300px;
+			margin-left: -150px;
+		}
+	}
+
+	&.huge {
+		.tooltip-popup {
+			width: 560px;
+			margin-left: -280px;
+		}
+	}
+
+	&.error {
+		background-color: #d32a2a;
+		.tooltip-popup {
+			/*background-color: #a50606;*/
+			&:after {
+				/*border-top-color: #a50606;*/
+			}
+		}
+	}
+
+	&.with-link {
+		.tooltip-popup:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			height: 30px;
+		}
+	}
+
+	&.white {
+	    width: 18px;
+	    height: 18px;
+	    background-color: transparent;
+	    color: #aec0d3;
+	    line-height: 14px;
+	    box-sizing: border-box;
+	    border: 2px solid #aec0d3;
+	    padding-right: 1px;
+
+	    &:hover {
+	    	border-color: #86a0bc;
+	    	color: #86a0bc;
+	    }
+	}
+
+	.tooltip-popup {
+		z-index: 20;
+		text-align: left;
+		color: #f1f1f1;
+		font-family: OpenSans;
+		font-size: 13px;
+		line-height: 16px;
+		display: none;
+		position: absolute !important;
+		bottom: 100%;
+		margin-bottom: 10px;
+		left: 50%;
+		margin-left: -210px;
+		width: 420px;
+		padding: 10px 15px;
+		box-sizing: border-box;
+		background-color: #333;
+		border-radius: 3px;
+
+		ul {
+			padding-left: 10px !important;
+
+			li {
+				padding: 4px 0;
+			}
+		}
+
+		&:empty {
+			display: none !important;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			margin-top: -2px;
+			left: 50%;
+			border: 10px solid #333;
+			border-left-color: transparent;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+			margin-left: -10px;
+		}
+		span.blue,
+		a {
+			font-size: inherit !important;
+			position: relative;
+			color: #b6e1ff;
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 1px;
+				height: 1px;
+				background-color: #8696a1;
+			}
+			&:hover {
+				color: #78c7ff;
+				&:after {
+					display: none;
+				}
+			}
+		}
+		ul {
+			padding-left: 20px;
+		}
+	}
+	&.shown {
+		.tooltip-popup {
+			display: block;
+		}
+	}
+}

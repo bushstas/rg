@@ -1,0 +1,19 @@
+.main-menu {
+  padding: 15px 25px 14px 25px;
+  background-color: #000;
+  border-bottom: 1px solid #888;
+
+  .link {
+    color: #d1d1d1;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    cursor: pointer;
+    &.active {
+      color: #6eea47 !important;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+}

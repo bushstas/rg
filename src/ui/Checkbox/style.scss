@@ -1,0 +1,50 @@
+.checkbox {
+    display: block;
+    .control {
+        float: left;
+        width: 17px;
+        height: 17px;
+        box-sizing: border-box;
+        display: inline-block;
+        border-radius: 2px;
+        margin-right: 7px;
+        border: 1px solid #b0b6bf;
+        background-color: #fafafa;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        &:hover {
+        	border-color: #91a1b8;
+        }
+    }
+    &.checked {
+        .control {
+            background-image: url('/assets/images/checked-icon.png');
+        }
+    }
+    .label {
+        cursor: pointer;
+        font-size: 13px;
+    }
+    &.disabled {
+        .control {
+            opacity: 0.5;
+            cursor: default;
+            
+            &:hover {
+                border-color: #b0b6bf;
+            }
+        }
+        .label  {
+            cursor: default;
+            & > * {
+                opacity: 0.5;
+            }
+        }
+    }
+    .tooltip-sign {
+        float: left;
+        margin-right: 7px;
+    }
+}

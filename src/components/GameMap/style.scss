@@ -1,0 +1,177 @@
+.gamemap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	
+	.aside {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 160px;
+		bottom: 0;
+		border-left: 1px solid #888;
+		box-sizing: border-box;
+	}
+	.outer {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 160px;
+		overflow: hidden;	
+	}
+
+	.map-actions {
+	    div {
+	    	color: #e1e1e1;
+	    	padding: 5px 10px;
+	    	background-color: #000;
+	    	border-bottom: 1px solid #888;
+	    	min-width: 160px;
+	    	opacity: 0.9;
+	    	cursor: pointer;
+	    	&:hover {
+	    		color: #fff;
+	    	}
+	    }
+	}
+
+	.inner {
+		line-height: 0;
+		font-size: 0;
+		letter-spacing: -1px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: #000;
+	}
+
+	.cell {
+		position: relative;
+		width: 120px;
+		height: 120px;
+		border-radius: 3px;
+		margin: 5px;
+		display: inline-block;
+		line-height: 20px;
+		font-size: 20px;
+		letter-spacing: 0;
+		vertical-align: top;
+		padding: 10px;
+
+		&.inner-cell {
+			position: absolute;
+			.field {
+				background-image: url(/assets/images/dungeon.png);
+			}
+		}
+
+		&.fogged {
+			background-image: url(/assets/images/fogged.jpg);
+			.field {
+				background-image: none !important;
+			}
+		}
+		&:before {
+			content: '';
+		    position: absolute;
+		    left: -5px;
+		    top: -5px;
+		    right: -5px;
+		    bottom: -5px;
+		    z-index: 4;
+		    background-image: url(/assets/images/mapcell.jpg);
+		    background-size: cover;
+		}
+		&:after {
+			content: '';
+		    position: absolute;
+		    left: -5px;
+		    top: -5px;
+		    right: -5px;
+		    bottom: -5px;
+		    background-color: #000;
+		    opacity: 0.85;
+		    z-index: 5;
+		}
+		&.open {
+			&:after {
+				display: none;
+			}
+			.door {
+				cursor: pointer;
+				&:after {
+					display: none;
+				}	
+			}
+		}
+	}
+	.wall {
+		position: absolute;
+		background-image: url(/assets/images/wall.png);
+		z-index: 6;
+		&.right,
+		&.left {
+			width: 10px;
+			top: -10px;
+			bottom: -10px;
+		}
+		&.left {
+			left: -10px;
+		}
+		&.right {
+			right: -10px;
+		}
+		&.top,
+		&.bottom {
+			height: 10px;
+			left: -10px;
+			right: -10px;
+		}
+		&.top {
+			top: -10px;
+		}
+		&.bottom {
+			bottom: -10px;
+		}
+	}
+	.field {
+		position: relative;
+		z-index: 5;
+		width: 100px;
+		height: 100px;
+		border-radius: 3px;
+		background-image: url(/assets/images/grass.png);
+		background-repeat: no-repeat;
+		background-position: 50% 100%;
+	}
+	.object {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 100px;
+		height: 100px;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		&.tree {
+			margin-top: -30px;
+		}
+		&.campfire {
+			margin-top: -15px;
+		}
+		&.merchant {
+			margin-top: -10px;
+		}
+		&.crypt {
+			margin-top: -10px;
+		}
+		&.tower {
+			margin-top: -50px;
+			height: 120px;
+		}
+	}
+}

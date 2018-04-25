@@ -1,0 +1,39 @@
+.place-info {
+	position: relative;
+	padding: 12px 18px;
+	.name {
+		font-size: 26px;
+	}
+	&:before {
+		content: '';
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    background-color: #000;
+	    opacity: 0.6;
+	    border: 1px solid #888;
+	}
+
+	.place-info-inner {
+		position: relative;		
+		z-index: 2;
+	}
+	.upgrade {
+		position: absolute;
+		right: 74px;
+		top: -1px;
+		width: 84px;
+		height: 30px;
+		line-height: 32px;
+	}
+	.quit {
+		position: absolute;
+		right: 0;
+		top: -1px;
+		width: 64px;
+		height: 30px;
+		line-height: 32px;
+	}
+}

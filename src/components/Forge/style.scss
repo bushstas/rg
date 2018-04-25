@@ -1,0 +1,111 @@
+.forge {
+	.item {
+		&.material-item {
+			width: 150px !important;
+			height: 150px !important;
+		}
+	}
+	.place-info {
+		width: 600px;
+	}
+	.creating,
+	.transforming {
+		position: relative;
+		margin-top: 10px;
+		width: 600px;
+	}
+	.material-slots {
+		padding-left: 40px;
+	}
+	.material-slot {
+		width: 150px;
+		height: 150px;
+		vertical-align: top;
+		display: inline-block;
+		margin: 8px 10px;
+		border-radius: 3px;
+		background-image: url(/assets/images/square-slot.png);
+
+		.inner {
+			background-image: url(/assets/images/material.png);
+			width: 150px;
+			height: 150px;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+
+			&.busy {
+				background-image: none;
+			}
+		}
+		.item {
+			.quantity {
+				color: #382007 !important;
+				right: 15px;
+			}
+		}
+	}
+	.crafted-item {
+		margin: 70px auto 0 auto;
+		width: 180px;
+		height: 240px;
+		background-image: url(/assets/images/item.png);
+		border-radius: 3px;
+	}
+	.placed-item-container {
+		position: relative;
+		width: 600px;
+	}
+	.placed-item {
+		margin: 100px auto 0 auto;
+		width: 180px;
+		height: 240px;
+		border-radius: 3px;
+		background-image: url(/assets/images/item.png);
+		.inner {
+			width: 180px;
+			height: 240px;
+			background-image: url(/assets/images/forge-item.png);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+		}
+	}
+	.menu {
+		position: absolute;
+		bottom: 0;
+		line-height: 40px;
+    	left: 690px;
+		.menu-item {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 20px;
+			cursor: pointer;
+			color: #888;
+			&:hover {
+				color: #fff;
+			}
+			&.active {
+				color: #6eea47;
+			}
+		}
+	}
+	.item-actions {
+		.forge-action {
+			margin-top: 10px;
+			&:first-child {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.forge-action {
+		margin-top: 20px;
+		text-align: center;
+		span {
+			color: #888;
+			cursor: pointer;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}

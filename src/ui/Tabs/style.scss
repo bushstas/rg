@@ -1,0 +1,43 @@
+.tabs {
+	.tabs-menu {
+		margin-bottom: 20px;
+		position: relative;
+		line-height: 20px;
+		font-size: 18px;
+		padding: 0 20px;
+		padding-top: 20px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #c7d4e4;
+			height: 1px;
+		}
+		.tab-button {
+			font-family: RobotoBold;
+			display: inline-block;
+			margin-right: 30px;
+			cursor: pointer;
+			position: relative;
+			padding-bottom: 20px;
+			color: #464c5f;
+
+			&.active {
+				color: #4caf50;
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					height: 3px;
+					background-color: #4caf50;
+					left: 0;
+					right: 0; 
+				}
+			}
+		}
+	}
+}

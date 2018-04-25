@@ -1,0 +1,41 @@
+.dialog.countdown {
+	.dialog-container {
+		width: 400px;
+		height: 110px;
+		text-align: center;
+	}
+	.caption {
+		margin-top: 10px;
+		color: #f1f1f1;
+	}
+	.time {
+		margin-top: 10px;
+		line-height: 40px;
+		position: relative;
+
+		.scale {
+			border: 1px solid #888;
+			position: absolute;
+			z-index: 1;
+			left: 20px;
+			right: 20px;
+			top: 0;
+			bottom: 0;
+
+			.inner {
+				position: absolute;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				background-color: #444;
+				transition: width 1.5s; 
+			}
+		}
+		.text {
+			position: relative;
+			z-index: 2;
+			color: #aaa;
+		}
+	}
+}

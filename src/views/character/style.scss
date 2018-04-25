@@ -1,0 +1,85 @@
+.view.character-view {
+	white-space: nowrap;
+
+	.secondary-stats,
+	.main-stats {
+		display: inline-block;
+		vertical-align: top;
+		white-space: normal;
+	}
+	.main-stats {
+		width: 220px;
+	}
+	.secondary-stats {
+		width: 300px;
+		margin-left: 10px;
+	}
+	.chars-block {
+		border: 1px solid #888;
+		border-radius: 2px;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+
+	.term {
+		cursor: pointer;
+		&:hover {
+			color: #fcff82;
+		}
+	}
+
+	.char {
+		padding: 2px 0;
+		.value {
+			width: 25px;
+			text-align: right;
+			&.stat {
+				width: 100px;
+			}
+		}
+	}
+	.plus {
+		display: inline-block;
+		background-color: #ccc;
+		color: #000;
+		border-radius: 2px;
+		margin-right: 4px;
+		cursor: pointer;
+		font-size: 15px;
+		font-weight: bold;
+		line-height: 19px;
+		width: 16px;
+		text-align: center;
+		opacity: 0.6;
+		
+		&:hover {
+			opacity: 1;
+		}
+		&.disabled {
+			cursor: default;
+			opacity: 0.3;
+		}
+	}
+	.button {
+		float: right;
+		width: 106px;
+		&.reset {
+			float: left;
+		}
+	}
+	.weapon {
+		display: inline-block;
+		width: 20px;
+		background-color: #555;
+		border-radius: 2px;
+		text-align: center;
+		margin-left: 6px;
+		padding-top: 4px;
+		font-size: 20px;
+		cursor: pointer;
+		&.active {
+			background-color: #ccc;
+			color: #000;
+		}
+	}
+}
