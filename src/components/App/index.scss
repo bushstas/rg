@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Futura';
-    src: url('https://dev.initpro.ru/bushstas-test-api/backups/app/assets/fonts/Futura.woff2') format('woff2'),
-         url('https://dev.initpro.ru/bushstas-test-api/backups/app/assets/fonts/Futura.woff') format('woff');
+    src: url('../../assets/fonts/Futura.woff2') format('woff2'),
+         url('../../assets/fonts/Futura.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -28,7 +28,7 @@ body {
 	font-family: 'Futura';
 	color: #f1f1f1;
 	font-size: 23px;
-  background-image: url(/assets/images/back.jpg);
+  background-image: url(/assets/images/backgrounds/back.jpg);
 }
 ul li ul {
     margin: 15px 0 25px 0;
@@ -183,7 +183,7 @@ input:focus::-moz-placeholder {
     margin-right: 15px;
 }
 .loading {
-    background-image: url('/assets/images/loader.gif');
+    background-image: url('/assets/images/loaders/loader.gif');
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
