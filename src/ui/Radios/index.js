@@ -1,41 +1,43 @@
-import {autobind} from "core-decorators"
-import React from 'react'
-import Radio from '../Radio'
-import Component from 'app/ui/Component'
+import React from 'react';
+import Radio from '../Radio';
 
-import './style.scss'
-
-export default class Radios extends Component {
-	render() {
-		return (
-			<div className={this.getClasses('radios')}>
-				{this.mapProp('items')}
-			</div>
-		);
+export default class Radios extends React.PureComponent {
+	static defaultProps = {
+		onChange: () => {},
+		onDispose: () => {}
 	}
 
-	renderItem(item, i) {
-		let {value, label, disabled, note, disabledMessage, description} = item;
-		let	checked = value == this.props.value;
+	componentWillUnmount() {
+		let {name, onDispose} = this.props;
+		onDispose(name);
+	}
+
+	render() {
+		let {classes} = this.props;
 		return (
-			<div className="radio-item" key={i} style={this.getItemStyle(item)}>
-				<Radio ref={i} value={value} checked={checked} onChange={this.handleRadioChange} label={label} disabled={disabled} disabledMessage={disabledMessage} note={note} description={description}/>
+			<div class="self $classes">
+				{this.controls}
 			</div>
 		)
 	}
 
-	getItemStyle(item) {
-		let style;
-		if (item.hidden) {
-			style = {visibility: 'hidden'};
-		}
-		return style;
-	}
-
-	@autobind
-	handleRadioChange(name, value, checked) {
-		if (!this.hasProp('readOnly')) {
-			this.fireEvent('change', this.props.name, value);
+	get controls() {
+		let {items, name, value, onChange} = this.props;
+		let values = this.values;
+		if (items instanceof Array) {
+			return items.map((item, i) => {
+				let checked = item.value == value;
+				return (
+					<Radio 
+						name={name}
+						key={item.value}
+						checked={checked}
+						value={item.value}
+						onChange={onChange}>
+						{item.label}
+					</Radio>
+				)
+			});
 		}
 	}
 }

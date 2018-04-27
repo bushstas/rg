@@ -1,47 +1,106 @@
-import {autobind} from "core-decorators"
-import React from 'react'
-import Component from 'app/ui/Component'
-import {TOOLTIPS, TOOLTIP_CLASSES} from 'app/consts/tooltips.js'
+import React from 'react';
+import Icon from '../Icon';
+import Dialog from '../Dialog';
+import Store from 'xstore';
+import {dict, icons} from '../../utils/Dictionary';
 
-import './style.css';
+class Tooltip extends React.PureComponent {
+	render() {
+		let {tooltip, dark} = this.props;
+		let icon = dark ? 'tooltip2' : 'tooltip';
+		return (
+			<span class="self">
+				<Icon onClick={this.handleClick}>
+					{icons[icon]}
+				</Icon>
+				{!!tooltip && (
+					<Dialog
+						title={dict.tooltip}
+						classes="~middle"
+						clickMaskToClose={true}
+						onClose={this.handleClose}>
+						{this.content}
+					</Dialog>
+				)}
+			</span>
+		)
+	}
 
-export default class Tooltip extends Component {
-    render() {
-        let name = this.getProp('name');
-    	return (
-    		<div className={this.getClasses('tooltip-sign bold', !!name ? TOOLTIP_CLASSES[name] : '')} data-name={name}>
-    			{this.getProp('sign') || '?'}
-    			<div className="tooltip-popup">{this.renderContent()}</div>
-    		</div>
-    	);
-    }
+	get content() {
+		let {tooltip} = this.props;
+		return tooltip.map((item, i) => {
+			if (typeof item == 'string') {
+				return item;
+			}
+			switch (item.type) {
+				case 'cap':
+					return (
+						<div class="caption1" key={i}>
+							{item.value}
+						</div>
+					)
 
-    renderContent() {
-    	let cnt = this.getProp('children');
-        let name = this.getProp('name');
-        if (!cnt && name && TOOLTIPS[name]) {
-            cnt = TOOLTIPS[name];
-        }
-    	if (cnt instanceof Array) {
-    		return cnt.map(this.renderContentPart);
-    	}
-        return cnt;
-    }
+				case 'cap2':
+					return (
+						<div class="caption2" key={i}>
+							{item.value}
+						</div>
+					)
 
-    @autobind
-    renderContentPart(part, i) {
-        if (part) {
-            if (typeof part == 'string') {
-                return part;
-            }
-            if (part instanceof Object && part.value && part.type) {
-                if (part.type == 'text') {
-                    return part.value + ' ';
-                } else if (part.type == 'link') {
-                    return <a href={part.value} key={i}>{part.title}</a>
-                }
-            }
-        }
-    }
+				case 'p':
+					return (
+						<div class="paragraph" key={i}>
+							{item.value}
+						</div>
+					)
 
+				case 'c':
+					return (
+						<div class="code" key={i}>
+							{
+								item.value instanceof Array ? 
+									this.renderLines(item.value) : 
+									item.value}
+						</div>
+					)
+
+				case 'br':
+					return (
+						<div class="space" key={i}/>
+					)
+			}
+			return (
+				<div class="line" key={i}>
+					{item.value}
+				</div>
+			)
+		});
+	}
+
+	renderLines(lines) {
+		return lines.map((line, i) => {
+			return (
+				<div key={i}>
+					{line}
+				</div>
+			)
+		});
+	}
+
+	handleClick = () => {
+		let {children: name} = this.props;
+		if (name) {
+			this.props.doAction('TOOLTIP_SHOW', name);
+		}
+	}
+
+	handleClose = () => {
+		this.props.dispatch('TOOLTIP_CLOSED');
+	}
 }
+
+let params = {
+	has: 'tooltip',
+	flat: true
+}
+export default Store.connect(Tooltip, params);

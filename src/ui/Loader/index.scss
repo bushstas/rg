@@ -1,0 +1,93 @@
+.self {
+	var .abs.l50p.t50p.wh200.ml-100.mt-100.z10;
+
+	&:before {
+		var .cnt.abs.rubb.z1.bc-000;
+		opacity: 0.7;
+		border-radius: 50%;
+	}
+	
+	.container {
+		z-index: 2;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -40px;
+		margin-top: -40px;
+	}		
+	.whirlpool,
+	.whirlpool::before,
+	.whirlpool::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border: 2px solid rgb(126,124,126);
+		border-left-color: rgb(0,0,0);
+		border-radius: 1499px;
+		-o-border-radius: 1499px;
+		-ms-border-radius: 1499px;
+		-webkit-border-radius: 1499px;
+		-moz-border-radius: 1499px;
+	}
+	.whirlpool {
+		height: 75px;
+		width: 75px;
+		animation: cssload-rotate 1150ms linear infinite;
+		-o-animation: cssload-rotate 1150ms linear infinite;
+		-ms-animation: cssload-rotate 1150ms linear infinite;
+		-webkit-animation: cssload-rotate 1150ms linear infinite;
+		-moz-animation: cssload-rotate 1150ms linear infinite;
+	}
+	.whirlpool::before {
+		content: "";
+		margin: -35px 0 0 -35px;
+		height: 66px;
+		width: 66px;
+		animation: cssload-rotate 1150ms linear infinite;
+		-o-animation: cssload-rotate 1150ms linear infinite;
+		-ms-animation: cssload-rotate 1150ms linear infinite;
+		-webkit-animation: cssload-rotate 1150ms linear infinite;
+		-moz-animation: cssload-rotate 1150ms linear infinite;
+	}
+	.whirlpool::after {
+		content: "";
+		margin: -44px 0 0 -44px;
+		height: 84px;
+		width: 84px;
+		animation: cssload-rotate 2300ms linear infinite;
+		-o-animation: cssload-rotate 2300ms linear infinite;
+		-ms-animation: cssload-rotate 2300ms linear infinite;
+		-webkit-animation: cssload-rotate 2300ms linear infinite;
+		-moz-animation: cssload-rotate 2300ms linear infinite;
+	}
+}
+
+@keyframes cssload-rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes cssload-rotate {
+	100% {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes cssload-rotate {
+	100% {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes cssload-rotate {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}

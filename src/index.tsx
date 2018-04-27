@@ -1,15 +1,17 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import App from 'components/App';
+import App from './containers/App';
 import Store from 'xstore';
 
-import app from './store_handlers/app';
+import battle from './store_handlers/battle';
+import user from './store_handlers/user';
 
 Store.setDefaultParams({
 	flat: true
 });
 Store.addHandlers({
-	app
+	user,
+	battle
 });
 
 ReactDOM.render(

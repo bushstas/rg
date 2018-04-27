@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const classy = require('classy-loader');
 classy.init({
     globalPrefix: '',
+    attributeName: 'className',
     obfuscation: false,
     autoPrefixMode: true,
     prefixAutoResolving: 'folder',

@@ -1,0 +1,19 @@
+.self {
+	.caption {
+		padding-bottom: 6px;
+		color: #555;
+	}
+	.content {
+		var .rel;
+	}
+	input[type="text"],
+	input[type="password"],
+	select,
+	textarea {
+		box-sizing: border-box;
+		width: 100%;
+	}
+	..tooltip {
+		var .abs.r-30.t6;
+	}
+}

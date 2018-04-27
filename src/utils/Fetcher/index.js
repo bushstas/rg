@@ -31,7 +31,7 @@ class Fetcher {
 			}
 		}
 		query = query.join('&');
-		return 'api/index.php' + (!!query ? '?' + query : '');
+		return '/api/index.php' + (!!query ? '?' + query : '');
 	}
 
 	getFormData(data) {
