@@ -1,10 +1,9 @@
-import StoreKeeper from '../StoreKeeper';
 import Store from 'xstore';
 //import {showSuccessNotification, showErrorNotification} from '../../components/Notifications';
 
 class Fetcher {
 	getPathToApi(action, data) {
-		var token = StoreKeeper.get('token');
+		var token = Store.getState('user.token') || '';
 		var query = [];
 		if (typeof XTaskLang != 'undefined') {
 			var XTaskLang = 'ru';

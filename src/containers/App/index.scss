@@ -28,7 +28,7 @@ body {
 	font-family: 'Futura';
 	color: #f1f1f1;
 	font-size: 23px;
-  background-image: url(/assets/images/backgrounds/back.jpg);
+  background-image: url(/assets/images/back.jpg);
 }
 ul li ul {
     margin: 15px 0 25px 0;
@@ -181,11 +181,6 @@ input:focus::-moz-placeholder {
 }
 .mr15 {
     margin-right: 15px;
-}
-.loading {
-    background-image: url('/assets/images/loaders/loader.gif');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
 }
 
 .pointer {

@@ -114,27 +114,12 @@ const config = {
                 loader: 'file-loader?name=[name].[ext]&outputPath=fonts&publicPath=../fonts'
             },
             { 
-                test: /\.(jpe*g|png)$/,
+                test: /\.(jpe*g|png|gif)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name]_[hash].[ext]',
-                    outputPath: 'images/backgrounds/',
-                    publicPath: '../images/backgrounds/',
-                    include: [
-                        pr(__dirname, "src/assets/images/backgrounds")
-                    ]
-                }
-            },
-            { 
-                test: /\.gif$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name]_[hash].[ext]',
-                    outputPath: 'images/loaders/',
-                    publicPath: '../images/loaders/',
-                    include: [
-                        pr(__dirname, "src/assets/images/loaders")
-                    ]
+                    outputPath: 'images/',
+                    publicPath: '../images/'
                 }
             },
             {

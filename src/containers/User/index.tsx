@@ -31,7 +31,7 @@ class User extends React.Component<IProps, {}> {
 		const {fetching, children} = this.props;
 		return (
 			<Loader 
-				classes="self"
+				classes="..main-container"
 				fetching={fetching}
 			>
 				{children}

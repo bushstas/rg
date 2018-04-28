@@ -1,3 +1,10 @@
 .self {
-  
+	.enemies {
+		var .abs.t.l100.r100.h200.flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+	.hero-condition {
+		var .abs.b.l100.r100.h60;
+	}
 }

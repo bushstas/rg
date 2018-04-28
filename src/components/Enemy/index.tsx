@@ -11,6 +11,7 @@ export default class Enemy extends React.Component<IProps, {}> {
 		const {data: {name, type, img}} = this.props;
 		return (
 			<div className="self">
+				<div className="ground dirt"/>
 				<CreatureImage
 					type={type}
 					id={img}

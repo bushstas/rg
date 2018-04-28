@@ -1,6 +1,7 @@
 export type IChildren = JSX.Element[] | JSX.Element | string;
 
 export interface IComponent {
+	onClick?: (e: any) => void;
 	key?: string | number;
 	classes?: string;
 	children?: IChildren;
@@ -33,6 +34,12 @@ export interface IFormState {
 	data: IFormData;
 }
 
+export interface IBattleData {
+	enemies: IEnemy[];
+	heroCondition: IHeroCondition;
+	active: boolean;
+}
+
 export interface IEnemy {
 	name: string;
 	key: string;
@@ -40,4 +47,21 @@ export interface IEnemy {
 	id: number;
 	img: string;
 	level: number;
+	life: number[];
 }
+
+export interface IHeroCondition {
+	life: number[];
+	mana: number[];
+	stamina: number[];
+	effects: IConditionEffect[];
+}
+
+export interface IConditionEffect {
+	type: EConditionEffectType;
+	bonuses: IConditionEffectBonus;
+}
+
+export interface IConditionEffectBonus {}
+
+export enum EConditionEffectType { Good, Bad }

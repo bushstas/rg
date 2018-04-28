@@ -1,6 +1,8 @@
 <?php
 
 include 'utils.php';
+include 'data.php';
+define('TOKEN', $_GET['token']);
 
 $action = $_GET['action'];
 $parts = explode('_', $action);

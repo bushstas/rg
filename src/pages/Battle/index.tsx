@@ -2,10 +2,10 @@ import * as React from "react";
 import Store from "xstore";
 import Enemy from "../../components/Enemy";
 import Loader from "../../ui/Loader";
-import {IConnectedComponent, IEnemy} from '../../models';
+import {IConnectedComponent, IEnemy, IBattleData} from '../../models';
 
-interface IProps extends IConnectedComponent {
-	enemies: IEnemy[];
+interface IProps extends IConnectedComponent, IBattleData {
+	
 }
 
 class Battle extends React.Component<IProps, {}> {
@@ -22,6 +22,9 @@ class Battle extends React.Component<IProps, {}> {
 			>
 				<div className="enemies">
 					{this.enemies}
+				</div>
+				<div className="hero-condition">
+					{this.heroCondition}
 				</div>
 			</Loader>
 		)
@@ -41,6 +44,11 @@ class Battle extends React.Component<IProps, {}> {
 			});
 		}
 		return result;
+	}
+
+	get heroCondition() {
+		const {heroCondition} = this.props;
+		return null;
 	}
 }
 

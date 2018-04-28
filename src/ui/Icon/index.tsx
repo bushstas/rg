@@ -3,7 +3,6 @@ import {icons} from '../../utils/Dictionary';
 import {IComponent} from '../../models';
 
 interface IProps extends IComponent {
-	onClick?: (e: any) => void;
 	size?: string;
 	icon?: string;
 }

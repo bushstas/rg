@@ -1,3 +1,40 @@
 .self {
-	
+	var .w180.h140.rel.pntr;
+
+	..creature-image {
+		width: 100px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	&:hover {
+		.ground {
+			outline: 2px solid #9dd822;
+		}
+	}
+	&:nth-child(2n) {
+		transform: translateY(-30px);
+	}
+
+	.ground {
+		position: absolute;
+		top: 0;
+		left: -20px;
+		z-index: 1;
+		width: 140px;
+		height: 140px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		transform: rotateX(-110deg) rotateY(-180deg) rotate(-45deg) translateZ(-65px);
+		box-shadow: 10px -10px 20px #000;
+
+		&.dirt {
+			background-image: url(/assets/images/dirt.png);
+		}
+
+		
+	}
 }
