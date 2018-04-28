@@ -33,7 +33,11 @@ class Battle {
 		$quantity = getNumber($data['quantity']);
 		$enemies = array();
 		for ($i = 0; $i < $quantity; $i++) {
-			$enemies[] = self::generateEnemy($data['level'], $data['types']);
+			$enemy = self::generateEnemy($data['level'], $data['types']);
+			if ($i == 0) {
+				$enemy['active'] = true;
+			}
+			$enemies[] = $enemy;
 		}
 		return $enemies;
 	}

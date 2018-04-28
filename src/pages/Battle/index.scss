@@ -1,8 +1,24 @@
 .self {
 	.enemies {
-		var .abs.t.l100.r100.h200.flex;
+		var .abs.t.l100.r100.h300;
+	}
+	.enemies-row {
+		var .abs.l.r.b.flex;
 		align-items: flex-end;
 		justify-content: center;
+	}
+	.enemies-first-row {
+		var .z3;
+	}
+	.enemies-second-row {
+		var .z2.b60;
+		transform: scaleY(0.7) scaleX(0.7);
+		opacity: 0.9;
+	}
+	.enemies-third-row {
+		var .z1.b110;
+		transform: scaleY(0.5) scaleX(0.5);
+		opacity: 0.8;
 	}
 	.hero-condition {
 		var .abs.b.l100.r100.h60;

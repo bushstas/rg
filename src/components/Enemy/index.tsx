@@ -8,9 +8,9 @@ interface IProps extends IComponent {
 
 export default class Enemy extends React.Component<IProps, {}> {
 	render() {
-		const {data: {name, type, img}} = this.props;
+		const {data: {name, type, img, active}} = this.props;
 		return (
-			<div className="self">
+			<div className="self $?..active">
 				<div className="ground dirt"/>
 				<CreatureImage
 					type={type}

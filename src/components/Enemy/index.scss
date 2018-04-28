@@ -1,5 +1,5 @@
 .self {
-	var .w180.h140.rel.pntr;
+	var .w160.h140.rel.pntr;
 
 	..creature-image {
 		width: 100px;
@@ -7,11 +7,22 @@
 		top: 0;
 		left: 0;
 		z-index: 2;
+		transition: top .2s;
 	}
 
+	&..active {
+		.ground {
+			outline: 2px solid #9dd822 !important;
+			box-shadow: 0 0 20px #9dd822 !important;
+		}
+	}
 	&:hover {
 		.ground {
-			outline: 2px solid #9dd822;
+			outline: 2px solid #ff8704;
+			box-shadow: 0 0 20px #ff8704;
+		}
+		..creature-image {
+			top: -3px;
 		}
 	}
 	&:nth-child(2n) {
@@ -33,6 +44,12 @@
 
 		&.dirt {
 			background-image: url(/assets/images/dirt.png);
+		}
+		&.dirt2 {
+			background-image: url(/assets/images/dirt2.png);
+		}
+		&.stone {
+			background-image: url(/assets/images/stone.png);
 		}
 
 		

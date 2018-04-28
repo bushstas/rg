@@ -48,6 +48,7 @@ export interface IEnemy {
 	img: string;
 	level: number;
 	life: number[];
+	active?: boolean;
 }
 
 export interface IHeroCondition {

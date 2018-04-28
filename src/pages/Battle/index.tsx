@@ -21,7 +21,15 @@ class Battle extends React.Component<IProps, {}> {
 				fetching={fetching}
 			>
 				<div className="enemies">
-					{this.enemies}
+					<div className="enemies-row enemies-first-row">
+						{this.enemies}
+					</div>
+					<div className="enemies-row enemies-second-row">
+						{this.enemies}
+					</div>
+					<div className="enemies-row enemies-third-row">
+						{this.enemies}
+					</div>
 				</div>
 				<div className="hero-condition">
 					{this.heroCondition}
