@@ -16,7 +16,7 @@ class User {
 
 	private static function get() {
 		return array(
-			'location' => 'battle'
+			'location' => 'travel'
 		);
 	}
 }

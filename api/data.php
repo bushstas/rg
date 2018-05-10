@@ -29,3 +29,17 @@ class Monsters {
 		return $list;
 	}
 }
+
+class Cards {
+	private static $types = array(
+		'cave',
+		'merchant',
+		'teacher',
+		'grove',
+		'monsters'
+	);
+
+	static function getTypes() {
+		return self::$types;
+	}
+}

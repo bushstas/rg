@@ -40,6 +40,10 @@ export interface IBattleData {
 	active: boolean;
 }
 
+export interface ITravelData {
+	cards: ITravelCard[];
+}
+
 export interface IEnemy {
 	name: string;
 	key: string;
@@ -49,6 +53,11 @@ export interface IEnemy {
 	level: number;
 	life: number[];
 	active?: boolean;
+}
+
+export interface ITravelCard {
+	type: string;
+	key: string;
 }
 
 export interface IHeroCondition {

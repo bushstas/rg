@@ -4,6 +4,7 @@ import App from './containers/App';
 import Store from 'xstore';
 
 import battle from './store_handlers/battle';
+import travel from './store_handlers/travel';
 import user from './store_handlers/user';
 
 Store.setDefaultParams({
@@ -11,7 +12,8 @@ Store.setDefaultParams({
 });
 Store.addHandlers({
 	user,
-	battle
+	battle,
+	travel
 });
 
 ReactDOM.render(
